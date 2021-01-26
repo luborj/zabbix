@@ -24,7 +24,7 @@ try:
     load_event_end = driver.execute_script('return window.performance.timing.loadEventEnd')
     total_time = load_event_end - connect_start
     print((total_time) / 1000)
+    driver.quit()
 except selenium.common.exceptions.TimeoutException:
     print('0')
-
-driver.quit()
+    driver.quit()
