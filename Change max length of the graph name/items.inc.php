@@ -1393,8 +1393,8 @@ function formatHistoryValue($value, array $item, $trim = true) {
 
 		case ITEM_VALUE_TYPE_TEXT:
 		case ITEM_VALUE_TYPE_LOG:
-			if ($trim && mb_strlen($value) > 20) {
-				$value = mb_substr($value, 0, 20).'...';
+			if ($trim && mb_strlen($value) > 60) {
+				$value = mb_substr($value, 0, 60).'...';
 			}
 
 			if ($mapping !== false) {
